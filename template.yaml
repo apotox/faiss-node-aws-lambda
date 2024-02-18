@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  use Faiss on Nodejs AWS Lambda
+
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  TestFaissFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/test-faiss
+      Handler: main.handler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+    Metadata:
+      BuildMethod: makefile
+Outputs:
+  TestFaissFunction:
+    Description: "test faiss"
+    Value: !GetAtt TestFaissFunction.Arn

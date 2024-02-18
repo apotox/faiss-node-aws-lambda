@@ -1,0 +1,20 @@
+{
+  "name": "test-faiss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Safi Bouhentala",
+    "url": "https://github.com/apotox"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "faiss-node": "^0.5.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "clean-install": "rm -rf node_modules && npm install"
+  }
+}
